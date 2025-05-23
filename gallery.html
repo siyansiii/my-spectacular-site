@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Our Favorite Games</title>
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #bf7968; /* Background color */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			padding: 0;
+			color: white;
+		}
+
+		.gallery-container {
+			background: #000000; /* Black background for the gallery container */
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+			width: 100%;
+			max-width: 1200px;
+			overflow: hidden;
+		}
+
+		/* Title */
+		h1 {
+			text-align: center;
+			color: #bf7968; /* Color for the title */
+			margin-bottom: 20px;
+			font-size: 36px;
+			font-weight: bold;
+		}
+
+		.gallery-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			width: 100%;
+		}
+
+		.gallery-grid img, .gallery-grid iframe {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 10px;
+			transition: transform 0.2s ease;
+		}
+
+		.gallery-grid img:hover, .gallery-grid iframe:hover {
+			transform: scale(1.05);
+		}
+
+		/* Add captions */
+		.gallery-item {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.caption {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			background: rgba(0, 0, 0, 0.6); /* Darker background for captions */
+			color: #bf7968; /* Color of captions */
+			padding: 5px 10px;
+			border-radius: 5px;
+		}
+
+		/* Make sure the iframe maintains the right aspect ratio */
+		.gallery-grid iframe {
+			width: 100%;
+			height: 100%;
+			max-height: 100px; /* Controls the height of video frames */
+		}
+
+		@media (max-width: 768px) {
+			.gallery-grid {
+				grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+			}
+		}
+
+		@media (max-width: 480px) {
+			.gallery-grid {
+				grid-template-columns: 1fr; /* 1 column for very small screens */
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="gallery-container">
+		<h1>Our Favorite Games</h1>
+		<div class="gallery-grid">
+			<!-- Photos with Captions -->
+			<div class="gallery-item">
+				<img src="./images/ml.jpeg" alt="Mobile Legends">
+			</div>
+			<div class="gallery-item">
+				<img src="./images/dota2.jpg" alt="Dota 2">
+			</div>
+			<div class="gallery-item">
+				<img src="./images/valo.jpg" alt="VALORANT">
+			</div>
+			<div class="gallery-item">
+				<img src="./images/lol.jpg" alt="League of Legends">
+			</div>
+			
+			<!-- Videos with Captions -->
+			<div class="gallery-item">
+				<iframe src="https://www.youtube.com/embed/mluQwhjQEIA?autoplay=1&mute=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<div class="caption">Exciting Gameplay</div>
+			</div>
+			<div class="gallery-item">
+				<iframe src="https://www.youtube.com/embed/CEVm8dzXtCc?autoplay=1&mute=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<div class="caption">Epic Moments</div>
+			</div>
+			<div class="gallery-item">
+				<iframe src="https://www.youtube.com/embed/xVuIT3kgFYU?autoplay=1&mute=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<div class="caption">Gameplay Highlights</div>
+			</div>
+			<div class="gallery-item">
+				<iframe src="https://www.youtube.com/embed/hyiNPo1JB_k?autoplay=1&mute=1&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<div class="caption">Intense Action</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
