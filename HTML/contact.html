@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stylish Contact Form with Map" />
+  <title>Contact and Map</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background: #bf7968;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      background-color: #F9D8D8;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    @media (min-width: 768px) {
+      .container {
+        flex-direction: row;
+      }
+    }
+
+    .contact-form,
+    .map-section {
+      padding: 25px 30px;
+      flex: 1;
+    }
+
+    .contact-form h2,
+    .map-section h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+      color: #6A0DAD;
+      border-bottom: 3px solid #6A0DAD;
+      display: inline-block;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      font-size: 16px;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border: 2px solid #FFA500;
+      outline: none;
+    }
+
+    .contact-form button {
+      width: 100%;
+      background: linear-gradient(90deg, #f3904f, #f5515f);
+      color: white;
+      border: none;
+      padding: 12px 0;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(90deg, #f5515f, #f3904f);
+    }
+
+    .map-section p {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .map-container {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h2>Get in touch</h2>
+      <input type="text" placeholder="Name" required />
+      <input type="email" placeholder="Email" required />
+      <textarea rows="4" placeholder="Message" required></textarea>
+      <button type="submit">Submit →</button>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-section">
+      <h3>How to Get Here</h3>
+      <p>We're located at 900 San Marcelino St, Ermita, Manila:</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=900+San+Marcelino+St,+Ermita,+Manila,+Philippines&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
